@@ -92,7 +92,7 @@ button {
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 button:active {
-  box-shadow: inset -1px -1px 10px 3px rgb(79, 78, 78);
+  box-shadow: inset -1px -1px 10px 3px rgb(116, 116, 116);
   transform: translateY(2px);
 }
 
