@@ -100,5 +100,5 @@ You are required to submit the following for review:
 
 
 git add -A 
-git commit -m "changed the css directory"
+git commit -m "last fix before submitting"
 git push origin main
