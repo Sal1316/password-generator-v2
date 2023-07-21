@@ -6,19 +6,25 @@ generateBtn.addEventListener("click", writePassword); // Add event listener to g
 function writePassword() {
   //variables: 
   var passLength = window.prompt(
-    "Input a password length between 8-128 characters."
+    "Input a password a between 8-128 characters in length."
   );
-  if(passLength === null) return; // exits when cancels.
-    
-  var charTypeUpper = window.confirm("Include UPPERCASE characters");
-  var charTypeLower = window.confirm("Include lowercase characters");
-  var charTypeNumeric = window.confirm("Include numeric( 0123... ) characters");
-  var charTypeSpacial = window.confirm("Include special(!#$%&@'()*) characters"); 
+  console.log("passLength" + passLength +"h");
+  if(passLength === "") {
+    alert("You must enter character!")
+    return;
+  };
   
-  if (passLength < 8 || passLength > 128) {
+  if (passLength < 8 || passLength > 128 || passLength === null) {
     window.alert("Password length does not match the parameter. Try again.");
     return;
   } 
+  else {
+    var charTypeUpper = window.confirm("Include UPPERCASE characters");
+    var charTypeLower = window.confirm("Include lowercase characters");
+    var charTypeNumeric = window.confirm("Include numeric( 0123... ) characters");
+    var charTypeSpacial = window.confirm("Include special(!#$%&@'()*) characters");
+  }
+  
   if(charTypeUpper === false && charTypeLower === false && charTypeNumeric === false && charTypeSpacial === false) {
     window.alert("You must select at least one criteria for password. \n\nFor example, \nShould contain atleast one uppercase, lowercase, numeric, or special character.");
     return;
